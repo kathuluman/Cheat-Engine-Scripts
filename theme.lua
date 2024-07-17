@@ -1,30 +1,17 @@
--- Adjust the opacity value as needed
-local opacityValue = 220
+local opacityValue = 220  -- Adjust this value (0-255) to set the desired opacity
 
--- Set main form properties
 getMainForm().Color = 0x000000
 getMainForm().AlphaBlend = true
 getMainForm().AlphaBlendValue = opacityValue
 
--- Adjust Cheat Table panel (assuming it's the first control in the address list)
-local cheatTablePanel = GetAddressList().Control[0]
-cheatTablePanel.BackgroundColor = 0x000000
-cheatTablePanel.AlphaBlend = true
-cheatTablePanel.AlphaBlendValue = opacityValue
+getMainForm().Foundlist3.Color = 0x000000  -- Addresses list color panel
+getMainForm().Foundlist3.AlphaBlend = true
+getMainForm().Foundlist3.AlphaBlendValue = opacityValue
 
--- Set Cheat Table panel properties
-cheatTablePanel.Width = 600  -- Adjust width as needed
-cheatTablePanel.Height = 400  -- Adjust height as needed
-cheatTablePanel.AnchorSideTop.Control = getMainForm()
-cheatTablePanel.AnchorSideTop.Side = asrTop
-cheatTablePanel.AnchorSideBottom.Control = getMainForm()
-cheatTablePanel.AnchorSideBottom.Side = asrBottom
-cheatTablePanel.AnchorSideLeft.Control = getMainForm()
-cheatTablePanel.AnchorSideLeft.Side = asrLeft
-cheatTablePanel.AnchorSideRight.Control = getMainForm()
-cheatTablePanel.AnchorSideRight.Side = asrRight
+GetAddressList().Control[0].BackgroundColor = 0x000000  -- Cheat table panel
+GetAddressList().Control[0].AlphaBlend = true
+GetAddressList().Control[0].AlphaBlendValue = opacityValue
 
--- Set other panel properties similarly
 getMainForm().Panel1.Color = 0x000000
 getMainForm().Panel1.AlphaBlend = true
 getMainForm().Panel1.AlphaBlendValue = opacityValue
@@ -37,15 +24,15 @@ getMainForm().Panel3.Color = 0x000000
 getMainForm().Panel3.AlphaBlend = true
 getMainForm().Panel3.AlphaBlendValue = opacityValue
 
-getMainForm().Panel4.Color = 0x000000
+getMainForm().Panel4.Color = 0x000000  -- Memory scan options panel
 getMainForm().Panel4.AlphaBlend = true
 getMainForm().Panel4.AlphaBlendValue = opacityValue
 
-getMainForm().Panel5.Color = 0x000000
+getMainForm().Panel5.Color = 0x000000  -- This is the top panel for cheat engine
 getMainForm().Panel5.AlphaBlend = true
 getMainForm().Panel5.AlphaBlendValue = opacityValue
 
-getMainForm().Panel6.Color = 0x000000
+getMainForm().Panel6.Color = 0x000000  -- Panel under memory scan Active memory only panel
 getMainForm().Panel6.AlphaBlend = true
 getMainForm().Panel6.AlphaBlendValue = opacityValue
 
@@ -57,11 +44,11 @@ getMainForm().Panel8.Color = 0x000000
 getMainForm().Panel8.AlphaBlend = true
 getMainForm().Panel8.AlphaBlendValue = opacityValue
 
-getMainForm().Panel9.Color = 0x000000
+getMainForm().Panel9.Color = 0x000000  -- Top right panel for Lua formula
 getMainForm().Panel9.AlphaBlend = true
 getMainForm().Panel9.AlphaBlendValue = opacityValue
 
-getMainForm().Panel10.Color = 0x000000
+getMainForm().Panel10.Color = 0x000000  -- Top right panel for Lua formula lower part
 getMainForm().Panel10.AlphaBlend = true
 getMainForm().Panel10.AlphaBlendValue = opacityValue
 
